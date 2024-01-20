@@ -11432,6 +11432,7 @@ section#portfolio {
 }
 
 #preloader{
+  top: 0;
   background: white url(../assets/x.gif) no-repeat center center;
   background-size: 20%;
   height: 100vh;
