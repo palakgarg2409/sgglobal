@@ -1,0 +1,149 @@
+.about-box{
+    position: relative;
+    width: 100px;
+    height: 70px;
+    background-color: #00796B;
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.left-lid{
+    position: absolute;
+    top: -3px;
+    left: 0px;
+    height: 2px;
+    width: 49px;
+    background-color: #00796B;
+    transform-origin: left bottom;
+    transform: rotate(120deg);
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.right-lid{
+    position: absolute;
+    top: -3px;
+    right: 0px;
+    height: 2px;
+    width: 49px;
+    background-color: #00796B;
+    transform-origin: right bottom;
+    transform: rotate(240deg);
+    transition: transform 0.5s ease-in-out;
+
+}
+
+
+.stage-index{
+    display: flex;
+    font-family: 'Kanit', sans-serif;
+    font-size: 120px;
+    color: grey;
+    align-items: flex-start;
+}
+
+.stage-info{
+    font-family: 'Kanit', sans-serif;
+    color: grey;
+    font-size: 20px;
+}
+
+.info-head, .info-head-trans{
+    font-weight: 800;
+    font-size: 40px;
+}
+
+.ship{
+    position: relative;
+    transform: translate(70vw);
+    transition: transform 0.3s;
+}
+
+.svg-ship{
+    height: 150px;
+}
+
+.smoke{
+    transform: translate(10px, -90px);
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #00796B;
+    opacity: 1;
+}
+
+.smoke1{
+    animation: smoke1 5s ease-in-out infinite;
+}
+
+.smoke2{
+    animation: smoke2 5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.smoke3{
+    animation: smoke3 7s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+@keyframes smoke1{
+    0%{}
+    50%{
+        height: 15px;
+        width: 15px;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(20px, -140px);
+        opacity: 0;
+    }
+}
+
+@keyframes smoke2{
+    0%{}
+    50%{
+        height: 15px;
+        width: 15px;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(20px, -140px);
+        opacity: 0;
+    }
+}
+
+@keyframes smoke3{
+    0%{}
+    50%{
+        height: 15px;
+        width: 15px;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(20px, -140px);
+        opacity: 0;
+    }
+}
+
+.stage2{
+    text-align: right;
+}
+
+.svg-truck{
+    height: 120px;
+}
+
+.truck{
+    position: relative;
+    transform: translateX(0);
+    transition: transform 0.5s;
+}
