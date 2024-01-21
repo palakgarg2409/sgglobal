@@ -295,6 +295,7 @@ section#footer{
 		margin-bottom: 40px;
 		text-align: center;
 		align-items: center;
+		padding: auto;
 	}
 
 	.footer-distributed .footer-center,
