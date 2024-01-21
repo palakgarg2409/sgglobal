@@ -3,9 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function revealOnScroll() {
+
     var box = document.getElementsByClassName("about-box")[0];
     var boxL = document.getElementsByClassName("left-lid")[0];
     var boxR = document.getElementsByClassName("right-lid")[0];
+    var packet1 = document.getElementsByClassName("seed_packet")[0];
+    var packet2 = document.getElementsByClassName("dry_packet")[0];
+    var packet3 = document.getElementsByClassName("seed_packet2")[0];
 
     var box_pos = box.getBoundingClientRect();
     var viewportHeight = window.innerHeight;
@@ -15,6 +19,9 @@ function revealOnScroll() {
         box.style.transform = "translateX(0vw)";
         boxL.style.transform = "rotate(120deg)";
         boxR.style.transform = "rotate(240deg)";
+        packet1.style.transform = "translate(0, -40px)";
+        packet2.style.transform = "translate(30px, -50px)";
+        packet3.style.transform = "translate(60px, -40px)";
     }else if (H < (0.7*viewportHeight) && H > (0.3*viewportHeight)) {
         var Xcalc = ((0.7*viewportHeight) - H)/(0.4*viewportHeight);
         box.style.transform = "translateX(" + Xcalc*70 + "vw)";
@@ -24,10 +31,16 @@ function revealOnScroll() {
 
         boxL.style.transform = "rotate(" + Langle + "deg)";
         boxR.style.transform = "rotate(" + Rangle + "deg)";
+        packet1.style.transform = "translate(0," +(-40)*(1-Xcalc) +"px)";
+        packet2.style.transform = "translate(30px," +(-50)*(1-Xcalc) +"px)";
+        packet3.style.transform = "translate(60px," +(-40)*(1-Xcalc) +"px)";
     }else{
         box.style.transform = "translateX(70vw)";
         boxL.style.transform = "rotate(360deg)";
         boxR.style.transform = "rotate(0deg)";
+        packet1.style.transform = "translate(0, 0)";
+        packet2.style.transform = "translate(30px, 0)";
+        packet3.style.transform = "translate(60px, 0)";
     }
 
     var ship = document.getElementsByClassName("ship")[0];
