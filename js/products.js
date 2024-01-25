@@ -3,7 +3,7 @@
 // 	$clamp(box, {clamp: 6});
 // });
 let products = document.querySelectorAll(".products")
-for(let i = 0; i < products.length; i++){
+for(let i = 1; i < products.length; i++){
 	products[i].addEventListener("mouseover", function(p){
 		products[i].getElementsByClassName("my-3")[0].style.color = "rgba(0, 0, 0, 0.5)"
 		products[i].getElementsByClassName("my-3")[0].classList.toggle("underlinet")
@@ -17,6 +17,12 @@ for(let i = 0; i < products.length; i++){
 		products[i].getElementsByTagName("img")[0].style.opacity = "1"
 	})
 }
+products[0].addEventListener("mouseover", function(p){
+	products[0].getElementsByClassName("my-3")[0].style.color = "rgba(0, 0, 0, 0.5)"
+	products[0].getElementsByClassName("my-3")[0].classList.toggle("underlinet")
+	// products[i].getElementsByTagName("img")[0].style.width = "75%"
+	products[0].getElementsByTagName("img")[0].style.opacity = "0.8"
+})
 
 //filling form with required product
 function getParameterByName(name, url){

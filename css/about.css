@@ -8,7 +8,7 @@
 .stage-index{
     display: flex;
     font-family: 'Kanit', sans-serif;
-    font-size: 120px;
+    font-size: 8vw;
     color: grey;
     align-items: flex-start;
 }
@@ -16,12 +16,33 @@
 .stage-info{
     font-family: 'Kanit', sans-serif;
     color: grey;
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 
 .info-head, .info-head-trans{
-    font-weight: 800;
-    font-size: 40px;
+    font-weight: 800;          
+    font-size: 2.5vw;
+}
+
+@media(max-width: 1000px){
+    .stage-index{
+        font-size: 80px;
+    }
+
+    .stage-info{
+        font-size: 18px;
+    }
+
+    .info-head, .info-head-trans{
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 500px){
+    .about-box, .svg-ship, .svg-truck{
+        transform: translateX(0);
+        margin: auto;
+    }
 }
 
 .about-box{
@@ -30,7 +51,7 @@
     height: 70px;
     display: block;
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0vw);
     transition: transform 1s ease-in-out;
     z-index: 0;
 }
@@ -89,8 +110,9 @@
 
 .ship{
     position: relative;
-    transform: translate(70vw);
+    transform: translate(65vw);
     transition: transform 1s;
+    display: block;
 }
 
 .svg-ship{

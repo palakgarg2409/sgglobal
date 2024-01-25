@@ -11394,10 +11394,18 @@ section#portfolio {
 .slider-section-heading{
   text-align: center;
 }
+.cont{
+  overflow: hidden;
+}
 
 .p-slider{
-  display: inline-block;
-  margin: 0 0 50px;
+  z-index: -1000;
+  width: 2000px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  transition: transform 3s ease;
+  overflow: hidden;
+  position: relative;
 }
 
 .slider-heading{
@@ -11424,7 +11432,10 @@ section#portfolio {
 }
 
 .products{
+  width: 250px;
   margin-bottom: 30px;
+  display: inline-block;
+  transition: transform 2s ease, width 2s ease;
 }
 
 .show{
