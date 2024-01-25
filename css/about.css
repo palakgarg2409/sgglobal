@@ -39,9 +39,13 @@
 }
 
 @media(max-width: 500px){
-    .about-box, .svg-ship, .svg-truck{
+    .about-box{
         transform: translateX(0);
         margin: auto;
+    }
+
+    .ship, .truck{
+        transform: translateX(40vw);
     }
 }
 
@@ -201,4 +205,15 @@
     position: relative;
     transform: translateX(0);
     transition: transform 1s;
+}
+
+@media(max-width: 500px){
+    .about-box{
+        transform: translateX(0);
+        margin: auto;
+    }
+
+    .ship, .truck{
+        transform: translateX(32vw);
+    }
 }
