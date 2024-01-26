@@ -1,107 +1,78 @@
-sliders = document.getElementsByClassName("p-slider");
-sliderContainers = document.getElementsByClassName("cont");
-// counter = 0
-products1 = sliders[0].querySelectorAll(".products");
-products2 = sliders[1].querySelectorAll(".products");
-// // function sl(){
-// //     products[0].remove();
-// // }
-// // sliders[0].style.transform = "translateX(-250px)";
-// // setTimeout(sl, 4000);
+var sliders = document.getElementsByClassName("p-slider");
+var sliderContainers = document.getElementsByClassName("cont");
+var product = [sliders[0].querySelectorAll(".products"), sliders[1].querySelectorAll(".products")];
+const slideW = product[0][0].offsetWidth;
+let slides = [product[0].length, product[1].length];
+let counter = [0, 0];
 
-// function clearI(d){
-//     setTimeout(function(){
-//         sliders[0].querySelectorAll(".products")[d].remove();
-//         counter -= 1;
-//     },2000);
-// }
+const frameW = [slides[0] * slideW, slides[1] * slideW];
+const offset = [0, 0];
 
-// setInterval(function(){
-//     // sliders[0].querySelectorAll(".products")[counter].innerHTML = "";
-//     // sliders[0].querySelectorAll(".products")[counter].width = "0";
-//     sliders[0].appendChild(sliders[0].querySelectorAll(".products")[counter]);
-//     clearI(counter);
-//     counter += 1;
-//     // clearI(sliders[0].querySelectorAll(".products")[counter]);
-//     // counter += 1;
-// }, 1000);
-
-const slideW = products1[0].offsetWidth;
-let slides1 = products1.length;
-let slides2 = products2.length;
-let counter1 = 0;
-let counter2 = 0;
-
-const frameW1 = slides1 * slideW;
-const frameW2 = slides2 * slideW;
-
-function nextSlide1(){
-    counter1 = (counter1 + 1) % slides1;
-    playSlider1();
+function nextSlide(i){
+    counter[i] = (counter[i] + 1) % slides[i];
+    playSlider(i);
 }
 
-function playSlider1(){
-    const offset1 = -1 * counter1 * slideW;
-    sliders[0].style.transform = 'translateX(' + offset1 + 'px)';
+function playSlider(i){
+    offset[i] = -1 * counter[i] * slideW;
+    sliders[i].style.transform = 'translateX(' + offset[i] + 'px)';
 
-    lastVisiblePosition = offset1 + frameW1;
-    if(lastVisiblePosition + slideW < sliderContainers[0].offsetWidth){
+    var lastVisiblePosition = offset[i] + frameW[i];
+    if(lastVisiblePosition + slideW < sliderContainers[i].offsetWidth){
         setTimeout(() => {
-            counter1 = slides1;
-            sliders[0].style.transform = "translateX(0px)";
-        }, 50);
-    }
-
-}
-
-function nextSlide2(){
-    counter2 = (counter2 + 1) % products2.length;
-    playSlider2();
-}
-
-function playSlider2(){
-    const offset2 = -1 * counter2 * slideW;
-    sliders[1].style.transform = 'translateX(' + offset2 + 'px)';
-
-    lastVisiblePosition = offset2 + frameW2;
-    if(lastVisiblePosition + slideW < sliderContainers[1].offsetWidth){
-        setTimeout(() => {
-            counter2 = slides2;
-            sliders[1].style.transform = "translateX(0px)";
+            counter[i] = slides[i];
+            sliders[i].style.transform = "translateX(0px)";
         }, 50);
     }
 }
 
-setInterval(function(){
-    nextSlide1();
-    nextSlide2();
-}, 3000);
+let Id = [setInterval(function(){
+            nextSlide(0);
+        }, 3000),
+        setInterval(function(){
+            nextSlide(1);
+        }, 3000)]
 
-//adding draggable feature
-let startX = 0;
-let isDragging = false;
-sliders[0].addEventListener('touchstart', (e)=>{
-    isDragging = true;
-    startX = e.touches[0].clientX;
-});
+let startX = [0, 0];
+let isDragging = [false, false];
+const currentX = [0, 0];
+const diffX = [0, 0];
+for(var i = 0; i < 2; i++){
+    //adding draggable feature
+    sliders[i].addEventListener('touchstart', (e)=>{
+        isDragging[i] = true;
+        startX[i] = e.touches[0].clientX;
+        clearInterval(Id[i]);
+    });
 
-sliders[0].addEventListener('touchmove', (e)=>{
-    if(!isDragging) return;
-    const currentX = e.touches[0].clientX;
-    const diffX = currentX - startX;
-    sliders[0].style.transform = 'translateX(' + -(counter1 * slideW) + diffX + 'px)';
-})
+    sliders[i].addEventListener('touchmove', (e)=>{
+        if(!isDragging[i]) return;
+        currentX[i] = e.touches[0].clientX;
+        diffX[i] = currentX[i] - startX[i];
+        sliders[i].style.transform = 'translateX(' + -(counter[i] * slideW) + diffX[i] + 'px)';
+    })
 
-sliders[0].addEventListener('touchend', (e)=>{
-    isDragging = false;
-    const currentX = e.changedTouches[0].clientX;
-    const diffX = currentX - startX;
-    if(Math.abs(diffX) > slideW / 4){
-        if(diffX > 0){
-            counter1 = Math.max(counter1 - 1, 0);
-        }else{
-            counter1 = Math.min(counter1 + 1, slides1 - 1);
+    sliders[i].addEventListener('touchend', (e)=>{
+        isDragging[i] = false;
+        currentX[i] = e.changedTouches[0].clientX;
+        diffX[i] = currentX[i] - startX[i];
+        if(Math.abs(diffX[i]) > slideW / 4){
+            if(diffX[i] > 0){
+                counter[i] = Math.max(counter[i] - 1, 0);
+            }else{
+                counter[i] = Math.min(counter[i] + 1, slides[i] - 1);
+            }
         }
-    }
-    playSlider1();
-})
+        playSlider(i);
+        Id[i] = setInterval(()=>{nextSlide(i)}, 3000);
+    })
+
+    //stopping sliding while focusing
+    sliders[i].addEventListener('focus', ()=>{
+        clearInterval(Id[i]);
+    })
+
+    sliders[i].addEventListener('blur', ()=>{
+        Id[i] = setInterval(()=>{nextSlide(i);}, 3000);
+    })
+}
