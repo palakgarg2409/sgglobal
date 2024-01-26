@@ -78,25 +78,27 @@ setInterval(function(){
 }, 3000);
 
 //adding draggable feature
+let startX = 0;
+let isDragging = false;
 sliders[0].addEventListener('touchstart', (e)=>{
     isDragging = true;
-    startX = e.touches[0].ClientX;
+    startX = e.touches[0].clientX;
 });
 
 sliders[0].addEventListener('touchmove', (e)=>{
     if(!isDragging) return;
-    const currentX = e.touches[0].ClientX;
+    const currentX = e.touches[0].clientX;
     const diffX = currentX - startX;
-    slider.style.transform = 'translateX(' + -(counter1 * slideW) + diffX + 'px)';
+    sliders[0].style.transform = 'translateX(' + -(counter1 * slideW) + diffX + 'px)';
 })
 
 sliders[0].addEventListener('touchend', (e)=>{
     isDragging = false;
-    const currentX = e.changedTouches[0].ClientX;
+    const currentX = e.changedTouches[0].clientX;
     const diffX = currentX - startX;
     if(Math.abs(diffX) > slideW / 4){
         if(diffX > 0){
-            counter1 = Math.max(currentIndex - 1, 0);
+            counter1 = Math.max(counter1 - 1, 0);
         }else{
             counter1 = Math.min(counter1 + 1, slides1 - 1);
         }

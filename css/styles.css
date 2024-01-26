@@ -11386,15 +11386,12 @@ section#portfolio {
 }
 
 
-
-
-
-
 /* added css */
 .slider-section-heading{
   text-align: center;
 }
 .cont{
+  border-left: black;
   overflow: hidden;
 }
 
