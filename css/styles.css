@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 /*!
 * Start Bootstrap - Agency v7.0.12 (https://startbootstrap.com/theme/agency)
 * Copyright 2013-2023 Start Bootstrap
@@ -11455,7 +11459,7 @@ section#portfolio {
   height: 100vh;
   width: 100%;
   position: fixed;
-  z-index: 1111;
+  z-index: 3111;
   overflow: hidden;
   opacity: 1;
   transition: display 1s, opacity 0.5s;
@@ -11480,4 +11484,103 @@ section#portfolio {
 body{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   overflow-x: hidden;
+}
+
+.contactConfirmation{
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(5px);
+  z-index: 2001;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: none;
+  transition: display 1s ease;
+}
+
+.confirm{
+  position: absolute;
+  top: 25vh;
+  left: 30vw;
+  margin: auto;
+  width: 40vw;
+  background-color: #00796B;
+  border-radius: 20px;
+}
+
+.tick{
+  margin-top: -5vh;
+  height: 15vh;
+}
+
+.confi1{
+  font-family: 'Poppins', sans-serif;
+  color: #001F3F;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.confi2{
+  font-weight: 600;
+  color: #001F3F;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.doneConfirm{
+  color: #00796B;
+  font-weight: 700;
+  width: 80px;
+  border: none;
+  margin-top: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #001F3F;
+  margin-bottom: 30px;
+  padding: 7px;
+}
+
+@media(max-width: 1300px){
+  .confirm{
+    width: 50vw;
+    left: 25vw;
+  }
+}
+
+@media(max-width: 900px){
+  .confirm{
+    width: 60vw;
+    left: 20vw;
+  }
+}
+
+@media(max-width: 700px){
+  .confirm{
+    width: 70vw;
+    left: 15vw;
+  }
+}
+
+@media(max-width: 500px){
+  .confirm{
+    width: 80vw;
+    left: 10vw;
+  }
+
+  .confi1{
+    font-size: 30px;
+  }
+
+  .confi2{
+    font-size: 20px;
+  }
+}
+
+@media(max-width: 400px){
+  .confirm{
+    width: 90vw;
+    left: 5vw;
+  }
 }

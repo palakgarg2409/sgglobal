@@ -17,6 +17,10 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/footer.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     </head>
     <body id="page-top">
         <div id="preloader">
@@ -73,25 +77,25 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <!-- Name input-->
-                                <input name="naam" class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="name" />
+                                <input name="naam" class="form-control" id="name" type="text" placeholder="Your Name *" required/>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <div class="form-group">
                                 <!-- Email address input-->
-                                <input name="sender" class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="email"/>
+                                <input name="sender" class="form-control" id="email" type="email" placeholder="Your Email *" required/>
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
                             <div class="form-group mb-md-0">
                                 <!-- Phone number input-->
-                                <input name="contactt" class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="phone"/>
+                                <input name="contactt" class="form-control" id="phone" type="tel" placeholder="Your Phone *" required/>
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
                                 <!-- Message input-->
-                                <textarea name="msg" class="form-control" id="message" placeholder="Your Message *" data-sb-validations="message"></textarea>
+                                <textarea name="msg" class="form-control" id="message" placeholder="Your Message *" required></textarea>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
                         </div>
@@ -115,6 +119,14 @@
                     <!-- Submit Button-->
                     <div class="text-center"><input class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit"></div>
                 </form>
+            </div>
+            <div class="contactConfirmation">
+                <div class="confirm">
+                    <img class="tick" src="assets/tick.svg"/>
+                    <div class="confi1">Thank You</div>
+                    <div class="confi2">Email Sent successfully!<br> We will reach out to you shortly</div>
+                    <button class="doneConfirm"> Done </button>
+                </div>
             </div>
         </section>
         <!-- Footer-->
@@ -270,6 +282,7 @@
         <script src="js/scripts.js"></script>
         <script src="js/products.js"></script>
         <script src="js/navbar.js"></script>
+        <script src="js/contact.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
