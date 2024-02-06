@@ -11104,6 +11104,55 @@ dialog::backdrop{
   background-position: center;
 }
 
+#popup11{
+  background-image: url("../assets/Flax.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#popup12{
+  background-image: url("../assets/garden_cress_seeds.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#popup13{
+  background-image: url("../assets/pumpkin_seeds.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#popup14{
+  background-image: url("../assets/quinoa_seeds.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#popup15{
+  background-image: url("../assets/sesame_seeds.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#popup16{
+  background-image: url("../assets/chia_seeds.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#popup17{
+  background-image: url("../assets/sunflower_seeds.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .p1p1{
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 1) 100%);
 }
@@ -11181,16 +11230,16 @@ dialog::backdrop{
 
 @media(max-width: 576px){
   .p1p1{
-    background: rgba(0, 0, 0, 0.5);
-  }
-
-  .popup-text{
-    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
   }
 
   .popup-desc{
     font-size: 18px;
-    padding: 5px;
+    padding-left: 15px;
+  }
+
+  .nutritions{
+    padding-left: 15px;
   }
 
   .popup-heading{
