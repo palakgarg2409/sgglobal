@@ -11083,6 +11083,27 @@ dialog::backdrop{
   background-position: center;
 }
 
+#popup3{
+  background-image: url("../assets/Cashew.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#popup4{
+  background-image: url("../assets/Almonds.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#popup5{
+  background-image: url("../assets/raisins.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .p1p1{
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 1) 100%);
 }
@@ -11160,11 +11181,20 @@ dialog::backdrop{
 
 @media(max-width: 576px){
   .p1p1{
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
   }
 
   .popup-text{
     text-align: center;
+  }
+
+  .popup-desc{
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .popup-heading{
+    font-size: 32px;
   }
 }
 
