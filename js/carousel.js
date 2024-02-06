@@ -4,16 +4,23 @@ var product = [sliders[0].querySelectorAll(".products"), sliders[1].querySelecto
 const slideW = product[0][0].offsetWidth;
 const slides = [product[0].length, product[1].length];
 let counter = [0, 0];
+let dryL = document.getElementsByClassName("dry-left")[0];
+let dryR = document.getElementsByClassName("dry-right")[0];
 
 const frameW = [slides[0] * slideW, slides[1] * slideW];
 let offset = [0, 0];
 
 function nextSlide(i){
     counter[i] = (counter[i] + 1) % slides[i];
-    playSlider(i);
+    NplaySlider(i);
 }
 
-function playSlider(i){
+function prevSlide(i){
+    counter[i] = (counter[i] - 1 + slides[i]) % slides[i];
+    PplaySlider(i);
+}
+
+function NplaySlider(i){
     offset[i] = -1 * counter[i] * slideW;
     sliders[i].style.transform = 'translateX(' + offset[i] + 'px)';
 
@@ -24,6 +31,17 @@ function playSlider(i){
             sliders[i].style.transform = "translateX(0px)";
         }, 50);
     }
+}
+
+function PplaySlider(i){
+    offset[i] = -1 * counter[i] * slideW;
+    var lastVisiblePosition = offset[i] + frameW[i];
+    while(lastVisiblePosition + slideW < sliderContainers[i].offsetWidth){
+        counter[i] -- ;
+        offset[i] = -1 * counter[i] * slideW;
+        lastVisiblePosition = offset[i] + frameW[i];
+    }
+    sliders[i].style.transform = 'translateX(' + offset[i] + 'px)';
 }
 
 let Id = [0,0]
@@ -80,4 +98,16 @@ sliders[0].addEventListener('focus', ()=>{
 
 sliders[0].addEventListener('blur', ()=>{
     Id[0] = setInterval(()=>{nextSlide(0);}, 3000);
+})
+
+dryL.addEventListener("click", function(){
+    clearInterval(Id[0]);
+    prevSlide(0);
+    Id[0] = setInterval(function(){nextSlide(0);}, 3000);
+})
+
+dryR.addEventListener("click", function(){
+    clearInterval(Id[0]);
+    nextSlide(0);
+    Id[0] = setInterval(function(){nextSlide(0);}, 3000);
 })

@@ -35,7 +35,7 @@ section#footer{
 /* Footer left */
 .footer-distributed .footer-left p{
     font-size: 13px;
-    color:  #00796B;
+    color:  #167f92;
 }
 
 .footer-distributed .footer-left{
@@ -50,13 +50,13 @@ section#footer{
 /* The company logo */
 
 .footer-distributed h3{
-	color:  #00796B;
+	color:  #167f92;
 	font: normal 36px 'Open Sans', cursive;
 	margin: 0;
 }
 
 .footer-distributed h3 span{
-    color:  #00796B;
+    color:  #167f92;
     font-weight: bold;
 }
 
@@ -136,7 +136,7 @@ section#footer{
   font-weight:300;
   font-size: 20px;
   left: 0;
-  color: #00796B;
+  color: #167f92;
   display: inline-block;
   padding-right: 5px;
 }
@@ -176,7 +176,7 @@ section#footer{
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	background-color:  #00796B;
+	background-color:  #167f92;
 	border-radius: 2px;
 
 	font-size: 20px;
@@ -214,8 +214,8 @@ section#footer{
 
 
 .footer-distributed hr{
-	color: #00796B;
-	border-color: #00796B;
+	color: #167f92;
+	border-color: #167f92;
     margin: 20px 0 10px 0;
     opacity: 0.5;
 }
@@ -229,7 +229,7 @@ section#footer{
 
 .copyrights div a{
     text-decoration: none;
-    color: #00796B;
+    color: #167f92;
     margin: 0 5px 5px 0;
     font-weight: 500;
 }
@@ -239,7 +239,7 @@ section#footer{
     font-weight:300;
     font-size: 20px;
     left: 0;
-    color: #00796B;
+    color: #167f92;
     display: inline-block;
     padding-right: 5px;
   }

@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Open+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
+
+
 
 /*!
 * Start Bootstrap - Agency v7.0.12 (https://startbootstrap.com/theme/agency)
@@ -11056,47 +11062,109 @@ dialog{
 }
 
 dialog::backdrop{
-  background-color: rgba(256, 256, 256, 0.6);
+  background-color: rgba(0, 121, 107, 0.6);
 }
 
-/* .popup-image{
-  height: 100%;
-} */
+.popup-image{
+  width: 100%;
+}
+
+#popup1{
+  background-image: url("../assets/Foxnuts.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#popup2{
+  background-image: url("../assets/Groundnut.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.p1p1{
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 1) 100%);
+}
 
 .closePopup{
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   z-index: 10;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 25px;
+  transition: color 0.2s;
+}
+
+.closePopup:hover{
+  color: #00796B;
 }
 
 .popup-text{
   align-items: center;
   color: white;
+  padding-right: 20px;
+}
+
+.popup-desc{
+  font-size: 22px;
+  font-weight: lighter;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .popup-heading{
   text-align: center;
   padding: 20px 0 20px;
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 40px;
   color: white;
+  font-family: 'Protest Riot', sans-serif;
+}
+
+.nutritions{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.nutri-item{
+  margin-bottom: 10px;
+}
+
+.nutri-icon{
+  width: 17%;
+}
+.nutri-p{
+  width: 80%;
+  font-weight: 900;
 }
 
 .quotation-link{
-  padding: 20px 0 0;
+  padding: 20px 0 20px;
   text-align: center;
-  color: red;
+  color: black;
 }
 
 .quotation-button{
   border-radius: 5px;
-  color: red;
+  color: black;
 }
 
-@media (max-width: 800px){
+@media (max-width: 850px){
   dialog{
     width: 90%;
+  }
+}
+
+@media(max-width: 576px){
+  .p1p1{
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .popup-text{
+    text-align: center;
   }
 }
 
@@ -11466,6 +11534,36 @@ section#portfolio {
   background-size: cover;
   opacity: 1;
   z-index: -1;
+}
+
+.dry-container{
+  position: relative;
+}
+
+.dry-left, .dry-right{
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  color: white;
+  height: 100%;
+  width: 50px;
+  text-align: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.dry-left{
+  left: 12%;
+}
+
+.dry-right{
+  left: 100%;
+}
+
+.slider-i{
+  position: absolute;
+  top: 40%;
+  font-size: 30px;
 }
 
 .seeds-heading{
