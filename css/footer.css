@@ -265,7 +265,7 @@ section#footer{
 	position: absolute;
 	top: 25px;
 	left: 0px;
-	background-color: #FFD700;
+	background-color: #167f92;
 	color: black;
 	transition: width 0.2s ease-in-out;
   }
@@ -277,7 +277,7 @@ section#footer{
 	position: absolute;
 	top: 25px;
 	left: 0px;
-	background-color: #FFD700;
+	background-color: #167f92;;
   }
 
   /* If you don't want the footer to be responsive, remove these media queries */

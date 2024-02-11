@@ -64,7 +64,7 @@
     position: absolute;
     width: 100px;
     height: 70px;
-    background-color: #00796B;
+    background-color: #167f92;
 }
 
 .left-lid{
@@ -73,7 +73,7 @@
     left: 0px;
     height: 2px;
     width: 49px;
-    background-color: #00796B;
+    background-color: #167f92;
     transform-origin: left bottom;
     transform: rotate(120deg);
     transition: transform 0.5s ease-in-out;
@@ -86,7 +86,7 @@
     right: 0px;
     height: 2px;
     width: 49px;
-    background-color: #00796B;
+    background-color: #167f92;
     transform-origin: right bottom;
     transform: rotate(240deg);
     transition: transform 0.5s ease-in-out;
@@ -129,7 +129,7 @@
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background-color: #00796B;
+    background-color: #167f92;
     opacity: 1;
 }
 

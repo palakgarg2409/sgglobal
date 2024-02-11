@@ -2849,19 +2849,19 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #ffc800;
-  --bs-btn-border-color: #ffc800;
+  --bs-btn-bg: #167f92;
+  --bs-btn-border-color: #167f92;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #d9aa00;
-  --bs-btn-hover-border-color: #cca000;
+  --bs-btn-hover-bg: #167f92;
+  --bs-btn-hover-border-color: #167f92;
   --bs-btn-focus-shadow-rgb: 255, 208, 38;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #cca000;
-  --bs-btn-active-border-color: #bf9600;
+  --bs-btn-active-bg: #167f92;
+  --bs-btn-active-border-color: #167f92;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #ffc800;
-  --bs-btn-disabled-border-color: #ffc800;
+  --bs-btn-disabled-bg: #167f92;
+  --bs-btn-disabled-border-color: #167f92;
 }
 
 .btn-secondary {
@@ -10850,11 +10850,11 @@ p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
-#portfolio .section-heading{
-  color : white;
-  padding-top: 40px;
-  
+
+.section-subheading{
+  padding: 5px;
 }
+
 .page-section h3.section-subheading, .page-section .section-subheading.h3 {
   font-size: 1rem;
   font-weight: 400;
@@ -10915,7 +10915,12 @@ p {
   font-weight: 800;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #FFD700;
+  color: #167f92;
+}
+
+.nav-logo{
+  height: 50px;
+  padding-right: 7px;
 }
 
 @media (min-width: 992px) {
@@ -10987,7 +10992,7 @@ header.masthead .masthead-heading {
   letter-spacing: 3px;
   margin-top: -20px;
   margin-bottom: 30px;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 @media(max-width: 768px){
@@ -11488,6 +11493,16 @@ dialog::backdrop{
   height: 2.75rem;
 }
 
+.section-heading{
+  color: #001f3f;
+  letter-spacing: 2px;
+  font-family: 'Protest Strike', sans-serif;
+}
+
+.about-section{
+  margin-top: -100px;
+}
+
 section#contact {
   background-color: #212529;
   background-image: url("../assets/img/map-image.png");
@@ -11619,6 +11634,10 @@ section#portfolio {
   position: relative;
 }
 
+.dry-slides{
+  position: relative;
+}
+
 .dry-left, .dry-right{
   position: absolute;
   top: 0;
@@ -11632,11 +11651,35 @@ section#portfolio {
 }
 
 .dry-left{
-  left: 12%;
+  left: -15px;
 }
 
 .dry-right{
-  left: 100%;
+  right: -15px;
+}
+
+.seeds-slides{
+  position: relative;
+}
+
+.seeds-left, .seeds-right{
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  color: white;
+  height: 100%;
+  width: 50px;
+  text-align: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.seeds-left{
+  left: -15px;
+}
+
+.seeds-right{
+  right: -15px;
 }
 
 .slider-i{
