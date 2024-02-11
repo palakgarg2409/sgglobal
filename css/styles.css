@@ -3746,7 +3746,7 @@ textarea.form-control-lg {
   --bs-navbar-toggler-padding-x: 0.75rem;
   --bs-navbar-toggler-font-size: 1.25rem;
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  --bs-navbar-toggler-border-color: rgba(0, 0, 0, 0.1);
+  --bs-navbar-toggler-border-color: rgba(256, 256, 256, 1);
   --bs-navbar-toggler-border-radius: 0.375rem;
   --bs-navbar-toggler-focus-width: 0.25rem;
   --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
@@ -3826,7 +3826,7 @@ textarea.form-control-lg {
   padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
   font-size: var(--bs-navbar-toggler-font-size);
   line-height: 1;
-  color: var(--bs-navbar-color);
+  color: white;
   background-color: transparent;
   border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
   border-radius: var(--bs-navbar-toggler-border-radius);
@@ -10888,6 +10888,9 @@ p {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  background-color: transparent;
+}
+#mainNav.navbar-shrink{
   background-color: #001F3F;
 }
 #mainNav .navbar-toggler {
@@ -10915,10 +10918,6 @@ p {
   color: #167f92;
 }
 
-.navbar-brand img{
-  height: 30px;
-}
-
 .nav-logo{
   height: 50px;
   padding-right: 7px;
@@ -10927,11 +10926,15 @@ p {
 .nav-logo-name{
   text-align: left;
   left: 0px;
+  height: 30px;
 }
 
 @media(max-width: 500px){
-  .navbar-brand img{
-    height: 20px;
+  .nav-logo-name{
+    height: 18px;
+  }
+  .nav-logo{
+    height: 30px;
   }
 }
 
