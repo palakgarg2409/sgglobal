@@ -6,6 +6,8 @@ const slides = [product[0].length, product[1].length];
 let counter = [0, 0];
 let dryL = document.getElementsByClassName("dry-left")[0];
 let dryR = document.getElementsByClassName("dry-right")[0];
+let seedL = document.getElementsByClassName("seeds-left")[0];
+let seedR = document.getElementsByClassName("seeds-right")[0];
 
 const frameW = [slides[0] * slideW, slides[1] * slideW];
 let offset = [0, 0];
@@ -78,7 +80,7 @@ for(var i = 0; i < 2; i++){
                 counter[i] = Math.min(counter[i] + 1, slides[i] - 1);
             }
         }
-        playSlider(i);
+        NplaySlider(i);
         Id[i] = setInterval(()=>{nextSlide(i)}, 3000);
     })
 
@@ -110,4 +112,16 @@ dryR.addEventListener("click", function(){
     clearInterval(Id[0]);
     nextSlide(0);
     Id[0] = setInterval(function(){nextSlide(0);}, 3000);
+})
+
+seedL.addEventListener("click", function(){
+    clearInterval(Id[1]);
+    prevSlide(1);
+    Id[1] = setInterval(function(){nextSlide(1);}, 3000);
+})
+
+seedR.addEventListener("click", function(){
+    clearInterval(Id[1]);
+    nextSlide(1);
+    Id[1] = setInterval(function(){nextSlide(1);}, 3000);
 })
