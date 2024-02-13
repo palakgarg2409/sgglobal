@@ -10,8 +10,8 @@
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
+    const navbarCollapsible = document.body.querySelector('#mainNav');
     var navbarShrink = function () {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
             return;
         }
@@ -47,7 +47,9 @@ window.addEventListener('DOMContentLoaded', event => {
         responsiveNavItem.addEventListener('click', () => {
             if (window.getComputedStyle(navbarToggler).display !== 'none') {
                 navbarToggler.click();
+                navbarCollapsible.classList.add('navbar-shrink');
             }
+            
         });
     });
 
