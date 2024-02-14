@@ -11532,9 +11532,18 @@ dialog::backdrop{
   letter-spacing: 2px;
   font-family: 'Protest Strike', sans-serif;
 }
-
-.about-section{
-  margin-top: -100px;
+#products{
+  margin-top: -60px;
+}
+#about{
+  margin-top: -200px;
+}
+@media(
+  max-width:900px
+){
+  #about,#products{
+    margin-top: 20px;
+  }
 }
 
 section#contact {
