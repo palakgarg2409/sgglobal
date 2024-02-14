@@ -10843,7 +10843,7 @@ p {
 }
 
 .page-section {
-  padding: 10rem 0;
+  padding: 10 rem 0;
 }
 .page-section h2.section-heading, .page-section .section-heading.h2 {
   font-size: 2.5rem;
@@ -10854,7 +10854,7 @@ p {
 
 .section-subheading{
   padding: 35px;
-  padding-left: 100px;
+  padding-left: 100px;        
   padding-right: 100px;
   text-align:justify;
   
@@ -10974,11 +10974,13 @@ p {
   }
 }
 header.masthead {
+  max-width: 100%;
+  height: auto;
   padding-top: 10.5rem;
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url("../assets/header-back.jpg");
+  background: linear-gradient(180deg, rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url("../assets/makhane.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
