@@ -10990,6 +10990,21 @@ header.masthead {
   background-color: rgba(0,0,0,0.6);
   background-blend-mode: overlay;
 }
+
+@media (
+  max-width:1000px
+) {
+  header.masthead{
+    background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url("../assets/mobilepic.jpg");
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-color: rgba(0,0,0,0.6);
+  background-blend-mode: overlay;
+  }
+
+}
 header.masthead .masthead-subheading {
   font-size: 1rem;
   font-weight: 700;
