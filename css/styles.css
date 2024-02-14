@@ -11536,13 +11536,16 @@ dialog::backdrop{
   margin-top: -60px;
 }
 #about{
-  margin-top: -200px;
+  margin-top: -250px;
 }
-@media(
-  max-width:900px
-){
-  #about,#products{
-    margin-top: 20px;
+@media(max-width:900px){
+  #about{
+    margin-top: -200px;
+  }
+}
+@media(max-width:767px){
+  #about{
+    margin-top: 70px;
   }
 }
 
