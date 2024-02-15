@@ -80,3 +80,56 @@ function revealOnScroll() {
     }
 
 }
+
+function makeCenter(cont, middle){
+    let contW = cont.offsetWidth;
+    let middleW = middle.offsetWidth;
+    let leftPos = (contW - middleW)/2;
+    middle.style.left = leftPos + "px";
+
+    window.addEventListener('resize', function(){
+        let contW = cont.offsetWidth;
+        let middleW = middle.offsetWidth;
+        let leftPos = (contW - middleW)/2;
+        middle.style.left = leftPos + "px";
+    })
+}
+
+const aboutlogo = document.getElementsByClassName("about-logo")[0];
+const aboutsection = document.getElementsByClassName("about-sec")[0];
+const aboutlogoback = document.getElementsByClassName("about-logo-back")[0];
+makeCenter(aboutsection, aboutlogo);
+makeCenter(aboutsection, aboutlogoback);
+
+const ab = document.getElementsByClassName("ab")[0];
+const ut = document.getElementsByClassName("ut")[0];
+const abb = document.getElementsByClassName("abb")[0];
+const utb = document.getElementsByClassName("utb")[0];
+
+window.addEventListener("load", function(){
+    const computedStyle = window.getComputedStyle(aboutlogoback);
+    const left = computedStyle.getPropertyValue("left");
+    const width = computedStyle.getPropertyValue("width");
+    const logobackL = parseInt(left, 10);
+    const logobackW = parseInt(width, 10);
+
+    let abW = ab.offsetWidth;
+    ab.style.left = (logobackL - abW - 5) + "px";
+    ut.style.left = (logobackL + logobackW + 5) + "px";
+    abb.style.left = (logobackL - abW - 5) + "px";
+    utb.style.left = (logobackL + logobackW + 5) + "px";
+})
+
+window.addEventListener("resize", function(){
+    const computedStyle = window.getComputedStyle(aboutlogoback);
+    const left = computedStyle.getPropertyValue("left");
+    const width = computedStyle.getPropertyValue("width");
+    const logobackL = parseInt(left, 10);
+    const logobackW = parseInt(width, 10);
+
+    let abW = ab.offsetWidth;
+    ab.style.left = (logobackL - abW - 5) + "px";
+    ut.style.left = (logobackL + logobackW + 5) + "px";
+    abb.style.left = (logobackL - abW - 5) + "px";
+    utb.style.left = (logobackL + logobackW + 5) + "px";
+})

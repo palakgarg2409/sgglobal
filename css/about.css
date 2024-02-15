@@ -27,9 +27,9 @@
 
 .about-logo-back{
     position: absolute;
-    top: -85px;
-    height: 170px;
-    width: 170px;
+    top: -75px;
+    height: 150px;
+    width: 150px;
     background-color: white;
     border-radius: 50%;
 }
@@ -47,21 +47,36 @@
     }
 }
 
-.ab-back, .ut-back{
+.ab, .ut{
     display: inline;
     position: absolute;
     font-size: 70px;
-    top: -35px;
-    color: white;
+    top: -60px;
+    color: #001F3F;
+    font-weight: 900;
 }
 
-.ab-front, .ut-front{
+.abb, .utb{
     display: inline;
     position: absolute;
-    font-size: 50px;
-    top: -25px;
+    font-size: 70px;
+    top: -60px;
     color: #001F3F;
-} 
+    -webkit-text-stroke: 19px white;
+    font-weight: 900;
+}
+
+@media(max-width: 600px){
+    .ab, .ut{
+        font-size: 50px;
+        top: -40px;
+    }
+    
+    .abb, .utb{
+        font-size: 50px;
+        top: -40px;
+    }
+}
 
 .about-desc{
     padding: 80px 100px 0;
