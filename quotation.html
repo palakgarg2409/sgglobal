@@ -63,12 +63,12 @@
                 </div>
                 <!-- * * * * * * * * * * * * * * *-->
                 <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
+              <!-- * * * * * * * * * * * * * * *-->
                 <!-- This form is pre-integrated with SB Forms.-->
                 <!-- To make this form functional, sign up at-->
                 <!-- https://startbootstrap.com/solution/contact-forms-->
                 <!-- to get an API token!-->
-                <form action="/sendEmail" method="get" id="contactForm">
+                <form action="/sendQuot" method="post" id="contactForm">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -142,6 +142,16 @@
                     <br><br>
                 </form>
             </div>
+
+            <div class="quotConfirmation">
+                <div class="confirm">
+                    <img class="tick" src="assets/tick.svg"/>
+                    <div class="confi1">Thank You</div>
+                    <div class="confi2">Quotation Sent successfully!<br> We will reach out to you shortly</div>
+                    <button class="doneConfirm"> Done </button>
+                </div>
+            </div>
+
         </section>
 
         
@@ -293,6 +303,7 @@
         <script src="js/scripts.js"></script>
         <script src="js/products.js"></script>
         <script src="js/navbar.js"></script>
+        <script src="js/quotation.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->

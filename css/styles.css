@@ -11876,6 +11876,20 @@ body{
   transition: display 1s ease;
 }
 
+.quotConfirmation{
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(5px);
+  z-index: 2001;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: none;
+  transition: display 1s ease;
+}
+
 .confirm{
   position: absolute;
   top: 25vh;
