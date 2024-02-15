@@ -11547,6 +11547,9 @@ dialog::backdrop{
   #about{
     margin-top: -200px;
   }
+  #products{
+    margin-top: 70px;
+  }
 }
 @media(max-width:767px){
   #about{
