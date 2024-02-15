@@ -3750,6 +3750,7 @@ textarea.form-control-lg {
   --bs-navbar-toggler-border-radius: 0.375rem;
   --bs-navbar-toggler-focus-width: 0.25rem;
   --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+  
   background-color: #00796B;
   position: relative;
   display: flex;
@@ -10902,7 +10903,7 @@ p {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: transparent;
+  background-color: #001F3F;
 }
 #mainNav.navbar-shrink{
   background-color: #001F3F;
@@ -11543,7 +11544,7 @@ dialog::backdrop{
 #about{
   margin-top: -250px;
 }
-@media(max-width:900px){
+@media(max-width:700px){
   #about{
     margin-top: -200px;
   }
